@@ -16,6 +16,7 @@ namespace SeleniumNUnitParam
         public void GoogleTest()
         {
             Driver.Navigate().GoToUrl("http://www.google.com");
+            System.Threading.Thread.Sleep(5000);
             Driver.FindElement(By.Name("q")).SendKeys("Selenium");
             System.Threading.Thread.Sleep(5000);
             Driver.FindElement(By.Name("btnG")).Click();
@@ -28,6 +29,7 @@ namespace SeleniumNUnitParam
         public void ExecuteAutomationTest()
         {
             Driver.Navigate().GoToUrl("http://executeautomation.com/demosite/Login.html");
+            System.Threading.Thread.Sleep(5000);
             Driver.FindElement(By.Name("UserName")).SendKeys("admin");
             Driver.FindElement(By.Name("Password")).SendKeys("admin");
             Driver.FindElement(By.Name("Login")).Submit();
